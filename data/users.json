@@ -1,0 +1,54 @@
+[
+  {
+    "id": "user-admin-001",
+    "name": "Admin User",
+    "email": "admin@scorecraft.com",
+    "role": "admin",
+    "gradeIds": [],
+    "subjectIds": [],
+    "createdAt": "2026-05-05T19:00:00.000Z",
+    "updatedAt": "2026-05-05T19:00:00.000Z"
+  },
+  {
+    "id": "user-teacher-001",
+    "name": "Teacher User",
+    "email": "teacher@scorecraft.com",
+    "role": "teacher",
+    "gradeIds": [
+      "grade-8",
+      "grade-9",
+      "grade-10"
+    ],
+    "subjectIds": [
+      "sub-8-phy",
+      "sub-9-phy",
+      "sub-10-phy"
+    ],
+    "createdAt": "2026-05-05T19:00:00.000Z",
+    "updatedAt": "2026-05-05T19:00:00.000Z"
+  },
+  {
+    "id": "user-student-001",
+    "name": "Student User",
+    "email": "student@scorecraft.com",
+    "role": "student",
+    "gradeIds": [
+      "grade-8"
+    ],
+    "subjectIds": [
+      "sub-8-phy"
+    ],
+    "createdAt": "2026-05-05T19:00:00.000Z",
+    "updatedAt": "2026-05-05T19:19:19.396Z"
+  },
+  {
+    "id": "1778008606449-y6k2su790",
+    "email": "t2@scorecraft.com",
+    "name": "T2",
+    "role": "teacher",
+    "gradeIds": [],
+    "subjectIds": [],
+    "createdAt": "2026-05-05T19:16:46.449Z",
+    "updatedAt": "2026-05-05T19:16:46.449Z"
+  }
+]

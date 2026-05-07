@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1778008529830-a28mnk74f",
+    "text": "Seikks",
+    "loId": "1778008442368-fkb08k5uc",
+    "chapterId": "1778008430633-e0qlcudew",
+    "subjectId": "sub-8-phy",
+    "gradeId": "grade-8",
+    "type": "mcq",
+    "options": [
+      {
+        "id": "1778008495105-xf9i0regn",
+        "text": "A",
+        "isCorrect": true
+      },
+      {
+        "id": "1778008495105-ir3cc7cu4",
+        "text": "B",
+        "isCorrect": false
+      },
+      {
+        "id": "1778008495105-za7b700ve",
+        "text": "C",
+        "isCorrect": false
+      },
+      {
+        "id": "1778008495105-qxdn3zot9",
+        "text": "D",
+        "isCorrect": false
+      }
+    ],
+    "correctOptionId": "1778008495105-xf9i0regn",
+    "difficulty": "medium",
+    "explanation": "Dswww",
+    "tags": [],
+    "createdBy": "user-teacher-001",
+    "createdAt": "2026-05-05T19:15:29.830Z",
+    "updatedAt": "2026-05-05T19:17:28.594Z",
+    "status": "approved"
+  },
+  {
+    "id": "1778009003806-lg2h1tv23",
+    "text": "Sywiwwi",
+    "loId": "1778008442368-fkb08k5uc",
+    "chapterId": "1778008430633-e0qlcudew",
+    "subjectId": "sub-8-phy",
+    "gradeId": "grade-8",
+    "type": "mcq",
+    "options": [
+      {
+        "id": "1778008974743-f8041en17",
+        "text": "Es",
+        "isCorrect": true
+      },
+      {
+        "id": "1778008974743-w1hw9hqhu",
+        "text": "Hf",
+        "isCorrect": false
+      },
+      {
+        "id": "1778008974743-keothnd40",
+        "text": "Eq",
+        "isCorrect": false
+      },
+      {
+        "id": "1778008974743-7tn5lngzl",
+        "text": "Ww",
+        "isCorrect": false
+      }
+    ],
+    "correctOptionId": "1778008974743-f8041en17",
+    "difficulty": "medium",
+    "explanation": "Ssbcs",
+    "tags": [
+      "Www"
+    ],
+    "createdBy": "user-teacher-001",
+    "createdAt": "2026-05-05T19:23:23.806Z",
+    "updatedAt": "2026-05-05T19:24:39.099Z",
+    "status": "approved"
+  }
+]

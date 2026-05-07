@@ -1,0 +1,16 @@
+[
+  { "id": "sub-8-phy", "name": "Physics", "gradeId": "grade-8", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-8-che", "name": "Chemistry", "gradeId": "grade-8", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-8-bio", "name": "Biology", "gradeId": "grade-8", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-8-mat", "name": "Mathematics", "gradeId": "grade-8", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  
+  { "id": "sub-9-phy", "name": "Physics", "gradeId": "grade-9", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-9-che", "name": "Chemistry", "gradeId": "grade-9", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-9-bio", "name": "Biology", "gradeId": "grade-9", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-9-mat", "name": "Mathematics", "gradeId": "grade-9", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  
+  { "id": "sub-10-phy", "name": "Physics", "gradeId": "grade-10", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-10-che", "name": "Chemistry", "gradeId": "grade-10", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-10-bio", "name": "Biology", "gradeId": "grade-10", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" },
+  { "id": "sub-10-mat", "name": "Mathematics", "gradeId": "grade-10", "status": "active", "createdAt": "2026-05-05T19:00:00.000Z", "updatedAt": "2026-05-05T19:00:00.000Z" }
+]

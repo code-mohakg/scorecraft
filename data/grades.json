@@ -1,0 +1,26 @@
+[
+  {
+    "id": "grade-8",
+    "name": "Grade 8",
+    "description": "Lower Secondary Grade 8",
+    "status": "active",
+    "createdAt": "2026-05-05T19:00:00.000Z",
+    "updatedAt": "2026-05-05T19:00:00.000Z"
+  },
+  {
+    "id": "grade-9",
+    "name": "Grade 9",
+    "description": "Secondary Grade 9",
+    "status": "active",
+    "createdAt": "2026-05-05T19:00:00.000Z",
+    "updatedAt": "2026-05-05T19:00:00.000Z"
+  },
+  {
+    "id": "grade-10",
+    "name": "Grade 10",
+    "description": "Secondary Grade 10",
+    "status": "active",
+    "createdAt": "2026-05-05T19:00:00.000Z",
+    "updatedAt": "2026-05-05T19:00:00.000Z"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "name": "scorecraft",
+  "version": "1.0.0",
+  "description": "ScoreCraft - Adaptive Question Bank & Testing Platform for Educational Institutions",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "education",
+    "testing",
+    "question-bank",
+    "adaptive-learning"
+  ],
+  "author": "ScoreCraft Team",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.16.0",
+    "next": "^16.2.4",
+    "papaparse": "^5.5.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "zustand": "^4.5.7"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.4",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^6.0.3"
+  }
+}
