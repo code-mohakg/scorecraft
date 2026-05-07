@@ -47,7 +47,7 @@ export default function BulkUploadPage() {
     Papa.parse(csvData, {
       header: true,
       skipEmptyLines: true,
-      complete: (results: any) => {
+      complete: (results: Papa.ParseResult<any>) => {
         const rows = results.data;
         const uploadResults = {
           total: rows.length,
@@ -108,7 +108,7 @@ export default function BulkUploadPage() {
 
         processRows();
       },
-      error: (error) => {
+      error: (error: Error) => {
         alert(`Parsing error: ${error.message}`);
         setIsProcessing(false);
       }
