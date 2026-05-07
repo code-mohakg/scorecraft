@@ -28,35 +28,67 @@ const DATA_KEYS = {
   CURRENT_USER: 'current_user',
 };
 
+// Detection for Vercel/Serverless environments
+const IS_VERCEL = process.env.NEXT_PUBLIC_VERCEL_ENV || process.env.VERCEL;
+const IS_BROWSER = typeof window !== 'undefined';
+
 /**
  * Generic API-based storage functions
  */
 export const storage = {
   async getAll<T>(key: string): Promise<T[]> {
+    // Fallback to localStorage if on Vercel
+    if (IS_VERCEL && IS_BROWSER) {
+      const data = localStorage.getItem(`scorecraft_${key}`);
+      return data ? JSON.parse(data) : [];
+    }
+
     try {
       const res = await fetch(`/api/data/${key}`);
-      if (!res.ok) return [];
+      if (!res.ok) {
+        // Try fallback if API fails
+        if (IS_BROWSER) {
+          const data = localStorage.getItem(`scorecraft_${key}`);
+          return data ? JSON.parse(data) : [];
+        }
+        return [];
+      }
       return await res.json();
     } catch {
+      if (IS_BROWSER) {
+        const data = localStorage.getItem(`scorecraft_${key}`);
+        return data ? JSON.parse(data) : [];
+      }
       return [];
     }
   },
 
   async saveAll<T>(key: string, data: T[]): Promise<void> {
+    // Save to localStorage if on Vercel
+    if (IS_VERCEL && IS_BROWSER) {
+      localStorage.setItem(`scorecraft_${key}`, JSON.stringify(data));
+      return;
+    }
+
     try {
-      await fetch(`/api/data/${key}`, {
+      const res = await fetch(`/api/data/${key}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+
+      if (!res.ok && IS_BROWSER) {
+        localStorage.setItem(`scorecraft_${key}`, JSON.stringify(data));
+      }
     } catch (error) {
       console.error(`Failed to save to FS: ${key}`, error);
+      if (IS_BROWSER) {
+        localStorage.setItem(`scorecraft_${key}`, JSON.stringify(data));
+      }
     }
   },
 
   // Current user still uses localStorage for session persistence across refreshes
-  // but could also be moved to cookies or FS if needed. 
-  // For simplicity, we'll keep it in localStorage for immediate auth state.
   getSync: <T>(key: string): T | null => {
     if (typeof window === 'undefined') return null;
     const item = localStorage.getItem(key);
