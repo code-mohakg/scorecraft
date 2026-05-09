@@ -28,8 +28,6 @@ const DATA_KEYS = {
   CURRENT_USER: 'current_user',
 };
 
-// Detection for Vercel/Serverless environments
-const IS_VERCEL = process.env.NEXT_PUBLIC_VERCEL_ENV || process.env.VERCEL;
 const IS_BROWSER = typeof window !== 'undefined';
 
 /**
@@ -37,12 +35,6 @@ const IS_BROWSER = typeof window !== 'undefined';
  */
 export const storage = {
   async getAll<T>(key: string): Promise<T[]> {
-    // Fallback to localStorage if on Vercel
-    if (IS_VERCEL && IS_BROWSER) {
-      const data = localStorage.getItem(`scorecraft_${key}`);
-      return data ? JSON.parse(data) : [];
-    }
-
     try {
       const res = await fetch(`/api/data/${key}`);
       if (!res.ok) {
@@ -64,12 +56,6 @@ export const storage = {
   },
 
   async saveAll<T>(key: string, data: T[]): Promise<void> {
-    // Save to localStorage if on Vercel
-    if (IS_VERCEL && IS_BROWSER) {
-      localStorage.setItem(`scorecraft_${key}`, JSON.stringify(data));
-      return;
-    }
-
     try {
       const res = await fetch(`/api/data/${key}`, {
         method: 'POST',
@@ -81,7 +67,7 @@ export const storage = {
         localStorage.setItem(`scorecraft_${key}`, JSON.stringify(data));
       }
     } catch (error) {
-      console.error(`Failed to save to FS: ${key}`, error);
+      console.error(`Failed to save to MongoDB: ${key}`, error);
       if (IS_BROWSER) {
         localStorage.setItem(`scorecraft_${key}`, JSON.stringify(data));
       }
